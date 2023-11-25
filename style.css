@@ -1,0 +1,138 @@
+:root {
+  --color-1: #3498db;
+  --color-2: #D3D3D3;
+  --text-color: #333;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: var(--text-color);
+  background-color: cyan;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  padding: 3rem 2rem;
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+  background-color: blueviolet;
+}
+
+header h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+#new-task-form {
+  display: flex;
+}
+
+#new-task-input {
+  flex: 1;
+  background-color: floralwhite;
+  padding: 1rem;
+  border-radius: 1.5rem;
+  margin-right: 1rem;
+  color: var(--text-color);
+  font-size: 1.50rem;
+  border: 2px solid var(--color-1);
+}
+
+#new-task-input::placeholder {
+  color: var(--color-1);
+}
+
+#new-task-submit {
+  color: black;
+  font-size: 1.5rem;
+  font-weight: 700;
+  background-color: var(--color-2);
+  cursor: pointer;
+  transition: background-color 0.4s;
+}
+
+#new-task-submit:hover {
+  background-color: darken(var(--color-2), 10%);
+}
+
+main {
+  flex: 1;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.task-list {
+  padding: 1rem;
+}
+
+.task-list h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: black;
+  margin-bottom: 1rem;
+}
+
+#tasks .task {
+  display: flex;
+  justify-content: space-between;
+  background-color: lightblue;
+  padding: 2rem;
+  border-radius: 0.5%rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.task .content {
+  flex: 1;
+}
+
+.task .content .text {
+  color: var(--text-color);
+  font-size: 1.125rem;
+  width: 100%;
+  display: block;
+  transition: 0.4s;
+}
+
+.task .content .text:not(:read-only) {
+  color: var(--color-2);
+}
+
+.task .actions {
+  display: flex;
+  margin: 0 -0.5rem;
+}
+
+.task .actions button {
+  cursor: pointer;
+  margin: 0 0.5rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: 0.4s;
+}
+
+.task .actions button:hover {
+  opacity: 0.8;
+}
+
+.task .actions button:active {
+  opacity: 0.6;
+}
+
+.task .actions .edit {
+  background-color: var(--color-2);
+  color: black;
+}
+
+.task .actions .delete {
+  background-color: #e74c3c;
+  color: black;
+}
